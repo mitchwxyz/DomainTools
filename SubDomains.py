@@ -11,6 +11,7 @@ def resolve_subs(url: str, sub_list_path = default_list_path) -> dict:
     """ Check for subdomains using the sub_list.txt
 
     :param url: Base URL to check for subdomains
+    :param sub_list_path: (optional) Alternate sub-domain name list
     """
     # Load subdomain list
     with open(sub_list_path, 'r') as f:
@@ -54,16 +55,19 @@ if __name__ == "__main__":
         url_dict = resolve_subs(lookup_url)
 
     # Build a dictionary of urls by IP
-    # TODO Add a WHOIS lookup to get the owner of each IP
+    # TODO Add a WHOIS lookup for each IP
     grouped = defaultdict(list)
     for key, val in url_dict.items():
         grouped[val].append(key)
 
     # Print grouped IP/URLs
     print()
-    print(f" {'IP':_^17} {'URL':_^31}")
+    ip_width = max(len(x) for x in grouped.keys()) + 1
+    url_width = max(len(x) for x in url_dict.keys()) + 1
+
+    print(f" {'IP'.center(ip_width+1, '_')} {'URL'.center(url_width + 1, '_')}")
     for ip, urls in grouped.items():
-        print(f"| {ip:<15} | {urls[0]:<29} |")
+        print(f"| {ip.ljust(ip_width, ' ')}| {urls[0].ljust(url_width, ' ')}|")
         for url in urls[1:]:
-            print(f"| {' '*15} | {url:<29} |")
-    print(f"|{'_'*17}|{'_'*31}|")
+            print(f"|{' '*ip_width} | {url.ljust(url_width, ' ')}|")
+    print(f"|{'_'*int(ip_width+1)}|{'_'*int(url_width+1)}|")
