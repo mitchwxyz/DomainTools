@@ -65,9 +65,11 @@ if __name__ == "__main__":
     ip_width = max(len(x) for x in grouped.keys()) + 1
     url_width = max(len(x) for x in url_dict.keys()) + 1
 
-    print(f" {'IP'.center(ip_width+1, '_')} {'URL'.center(url_width + 1, '_')}")
+    print(f" {'IP'.center(ip_width+1, '_')} {'URL'.center(url_width + 1, '_')}") # Header
+
     for ip, urls in grouped.items():
         print(f"| {ip.ljust(ip_width, ' ')}| {urls[0].ljust(url_width, ' ')}|")
         for url in urls[1:]:
             print(f"|{' '*ip_width} | {url.ljust(url_width, ' ')}|")
-    print(f"|{'_'*int(ip_width+1)}|{'_'*int(url_width+1)}|")
+
+    print(f"|{'_'*int(ip_width+1)}|{'_'*int(url_width+1)}|") # Footer
