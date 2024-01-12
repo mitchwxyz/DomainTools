@@ -1,3 +1,5 @@
+account
+accounts
 admin
 ads
 api
@@ -39,6 +41,7 @@ imap
 img
 info
 intranet
+ip
 ipv4
 landing
 learn
@@ -63,6 +66,7 @@ ns3
 ns4
 office
 old
+open
 owa
 pop
 pop3
@@ -74,6 +78,8 @@ relay
 remote
 rss
 sales
+script
+scripts
 search
 secure
 server
