@@ -13,6 +13,8 @@ blog
 calendar
 cdn
 chat
+client
+clients
 cms
 cp
 cpanel
@@ -29,6 +31,7 @@ download
 downloads
 email
 engage
+erp
 exchange
 feeds
 files
