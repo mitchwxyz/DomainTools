@@ -1,0 +1,6 @@
+beautifulsoup4>=4.9.3
+click>=8.0.0
+requests>=2.26.0
+rich>=10.0.0
+tinydb>=4.5.0
+configparser>=5.0.0
