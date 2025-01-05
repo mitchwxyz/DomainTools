@@ -1,11 +1,11 @@
-# Find Subdomains Tool
+# DomainTools
+> Web Analysis and Scrapping Tool
 
-`python SubDomains.py <base url> [<path to subdomain list>]`
+ `python DomainTools.py COMMAND [OPTIONS] [ARGUMENTS]`
 
-
-**base url**: Ex. google.com
-
-**subdomain list**: path to subdomain list, Default: ./sub_list.txt
+## Functionality
+- Subdomain Enumeration
+- Text scraping and analysis
 
 # Next Steps:
 ### IP ASN Data
@@ -14,4 +14,3 @@
 
 ### GeoLocation
 https://github.com/ipinfo/python - Has a Free API for Location
-
