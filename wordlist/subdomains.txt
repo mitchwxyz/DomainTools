@@ -37,6 +37,7 @@ email
 engage
 erp
 exchange
+factory
 feeds
 files
 forum
