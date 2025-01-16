@@ -19,6 +19,7 @@ client
 clients
 cms
 community
+connect
 content
 cp
 cpanel
